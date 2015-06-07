@@ -6,9 +6,11 @@ using System.Web.Http.OData;
 using Microsoft.WindowsAzure.Mobile.Service;
 using efwams.DataObjects;
 using efwams.Models;
+using Microsoft.WindowsAzure.Mobile.Service.Security;
 
 namespace efwams.Controllers
 {
+    [AuthorizeLevel(AuthorizationLevel.User)]
     public class EvalItemController : TableController<EvalItem>
     {
         protected override void Initialize(HttpControllerContext controllerContext)

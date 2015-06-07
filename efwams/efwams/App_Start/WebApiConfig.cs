@@ -31,16 +31,72 @@ namespace efwams
     {
         protected override void Seed(MobileServiceContext context)
         {
-            List<TodoItem> todoItems = new List<TodoItem>
+            List<SpeakerSessionItem> speakerSessionItems = new List<SpeakerSessionItem>
             {
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
+                //this is to seed the Speaker Session Items
+                new SpeakerSessionItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    EventName = "SharePoint Saturday Boston",
+                    EventCity = "Boston",
+                    EventURL = "http://www.spsevents.org/city/dc/2015summer",
+                    EventHashTag = "#SPSBOS",
+                    SessionTitle = "Azure Mobile Services and Xamarin.Forms",
+                    SessionNumber = "12345",
+                    SpeakerName = "Fabian G. Williams",
+                    EmailForGravatar = "jahmekyanbwoy@yahoo.com",
+                    EmailForContact = "fabian@adotob.com",
+                    SpeakerTH = "@fabianwilliams",
+                    MyTweet = "Test - Prepping for Boston Session on 6/13/2015"
+
+                }, 
+
+                new SpeakerSessionItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    EventName = "SharePoint Saturday DC",
+                    EventCity = "Chevy Chase",
+                    EventURL = "http://www.spsevents.org/city/boston/2015",
+                    EventHashTag = "#SPSBOS",
+                    SessionTitle = "Xamarin.Forms with Azure Mobile Services",
+                    SessionNumber = "54321",
+                    SpeakerName = "F.G. Williams",
+                    EmailForGravatar = "fabian@adotob.com",
+                    EmailForContact = "fabian@adotob.com",
+                    SpeakerTH = "@fabianwilliams",
+                    MyTweet = "Test - Prepping for DC Session on 6/13/2015"
+
+                }, 
             };
+            
+            List<TodoItem> todoItems = new List<TodoItem>
+            {                
+                // this is to seed the to do items
+                new TodoItem 
+                { 
+                    Id = Guid.NewGuid().ToString(), 
+                    Text = "First item", 
+                    Complete = false 
+                },
+                new TodoItem 
+                { 
+                    Id = Guid.NewGuid().ToString(), 
+                    Text = "Second item", 
+                    Complete = false 
+                },
+            };
+
+            foreach (SpeakerSessionItem ssItem in speakerSessionItems)
+            {
+                context.Set<SpeakerSessionItem>().Add(ssItem);
+            }
 
             foreach (TodoItem todoItem in todoItems)
             {
                 context.Set<TodoItem>().Add(todoItem);
             }
+
+            //now commit the seeded items to the respecteive tables
 
             base.Seed(context);
         }
