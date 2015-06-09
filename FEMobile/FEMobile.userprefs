@@ -1,0 +1,19 @@
+﻿<Properties StartupItem="iOS/fwevals.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone6.8.3" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="fwevals/ViewModel/SessionService.cs">
+    <Files>
+      <File FileName="fwevals/View/HomePage.cs" Line="1" Column="1" />
+      <File FileName="fwevals/View/ShowSession.cs" Line="1" Column="1" />
+      <File FileName="fwevals/View/SessionDetail.cs" Line="1" Column="1" />
+      <File FileName="fwevals/ViewModel/SessionService.cs" Line="23" Column="35" />
+      <File FileName="fwevals/Helpers/SessionCell.cs" Line="9" Column="2" />
+      <File FileName="iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="fwevals/Model/SpeakerSessionItem.cs" Line="1" Column="1" />
+      <File FileName="fwevals/Model/EvalItem.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
